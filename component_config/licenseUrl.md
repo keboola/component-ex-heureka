@@ -1,0 +1,1 @@
+https://github.com/keboola/component-ex-heureka/blob/master/LICENSE.md
