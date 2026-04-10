@@ -1,1 +1,1 @@
-Enter short description of the component here.
+Heureka is a popular e-commerce and price comparison platform.
