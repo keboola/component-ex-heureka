@@ -3,7 +3,7 @@ from enum import Enum
 from pydantic import BaseModel, ConfigDict, Field
 
 
-class LoadType(str, Enum):
+class LoadType(Enum):
     full_load = "full_load"
     incremental_load = "incremental_load"
 
@@ -11,7 +11,7 @@ class LoadType(str, Enum):
         return self == LoadType.incremental_load
 
 
-class DecimalSeparator(str, Enum):
+class DecimalSeparator(Enum):
     comma = "comma"
     dot = "dot"
 

@@ -17,8 +17,20 @@ dev = [
     "freezegun>=1.4.0",
     "ruff",
     "pytest",
+    "ty",
+    "pre-commit",
 ]
 
 [tool.ruff]
 line-length = 120
 exclude = ["__pycache__", ".git", ".venv", "venv", "docs"]
+
+[tool.ruff.lint]
+extend-select = ["I", "UP"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ty.environment]
+extra-paths = ["src"]
