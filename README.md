@@ -18,7 +18,7 @@ Functionality notes
 Configuration
 =============
 
-First, in the component configuration below, fill in the API key.
+First, in the component configuration below, fill in the API key [heureka.cz](https://sluzby.heureka.cz/statistics-and-reports/api) / [heureka.sk](https://sluzby.heureka.sk/statistics-and-reports/api).
 Then in the config row, specify the e-shop ID, date for which you want to retrieve the data, and destination table settings.
 
 Output
