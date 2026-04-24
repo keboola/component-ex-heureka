@@ -16,9 +16,9 @@
           "type": "string",
           "format": "password",
           "title": "Heureka API Key",
-          "description": "API key from your Heureka account.",
+          "description": "API key (API conversion measurement) from your Heureka account.",
           "options": {
-            "tooltip": "Get your API key at:\n- [heureka.cz](https://sluzby.heureka.cz/statistics-and-reports/conversion-measurement)\n- [heureka.sk](https://sluzby.heureka.sk/statistics-and-reports/conversion-measurement)"
+            "tooltip": "Get your API key at:\n- [heureka.cz](https://sluzby.heureka.cz/statistics-and-reports/api)\n- [heureka.sk](https://sluzby.heureka.sk/statistics-and-reports/api)"
           },
           "propertyOrder": 1
         }

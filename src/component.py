@@ -150,9 +150,12 @@ class Component(ComponentBase):
             return row
         return {k: str(v).replace(".", ",") if isinstance(v, float) else v for k, v in row.items()}
 
-    @backoff.on_exception(backoff.expo, requests.exceptions.RequestException, max_tries=3)
+    @backoff.on_exception(backoff.constant, requests.exceptions.RequestException, max_tries=30, interval=1)
     def _fetch_conversions(self, date_str: str) -> list[dict]:
-        headers = {"x-heureka-api-key": self.cfg.credentials.api_key}
+        headers = {
+            "x-heureka-api-key": self.cfg.credentials.api_key,
+            "User-Agent": f"keboola-ex-{self.environment_variables.stack_id}-{self.environment_variables.project_id}",
+        }
         response = requests.get(
             f"{API_BASE_URL}/reports/conversions",
             params={"date": date_str},
